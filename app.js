@@ -7,14 +7,18 @@ let outputBox = document.querySelector("#output-box");
 submitBtn.addEventListener("click", submitHandler);
 
 function submitHandler() {
+  hideOutput();
   var ip = Number(initialPrice.value);
   var qty = Number(stocksQuantity.value);
   var curr = Number(currentPrice.value);
 
-  if (ip !== 0 && qty !== 0 && curr !== 0) {
+  if (ip > 0 && qty > 0 && curr > 0) {
     calculateProfitAndLoss(ip, qty, curr);
+  } else if (ip == "" || qty == "" || curr == "") {
+    alert("Please fill out all the Fields");
   } else {
-    alert("Please fill out all Fields");
+    // alert("Please fill out all the Fields");
+    showOutput("Fields should be a positive number");
   }
 }
 
@@ -44,4 +48,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
 
 function showOutput(message) {
   outputBox.innerText = message;
+}
+function hideOutput() {
+  outputBox.innerText = "";
 }
