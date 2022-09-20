@@ -1,0 +1,91 @@
+:root {
+  --primary: #04406e;
+  --secondary: #1a2327;
+  --gray: #969696;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ******* others****** */
+
+body {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--secondary);
+}
+header > h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 1rem;
+}
+
+.input,
+.btn-check {
+  display: block;
+  font-size: 1rem;
+  margin: 1.5rem auto;
+  width: 30rem;
+  padding: 1rem 2rem;
+  border: none;
+}
+
+.input {
+  background-color: #111111;
+  color: #fff;
+}
+
+.btn-check {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #fff;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.output {
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+/* *****footer****** */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0.3rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+.footer-links {
+  display: inline-block;
+  color: var(--gray);
+  padding: 0 1rem 0;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer-links:hover {
+  transform: scale(1.05);
+}
+
+.footer-name {
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  padding: 0.3rem 0.3rem 0;
+  font-weight: 400;
+}

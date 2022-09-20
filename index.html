@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Profile & Loss Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.google.com/s2/u/0/favicons?domain=neog.camp"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Where's my stonks?</h1>
+    </header>
+
+    <main>
+      <label class="input-label" for="initial-price">
+        <input
+          class="input"
+          type="number"
+          id="initial-price"
+          placeholder="Enter Initial Price Here"
+      /></label>
+
+      <label class="input-label" for="stocks-quantity">
+        <input
+          class="input"
+          type="number"
+          id="stocks-quantity"
+          placeholder="Enter the Number of Stocks bought"
+        />
+      </label>
+
+      <label class="input-label" for="current-price">
+        <input
+          class="input"
+          type="number"
+          id="current-price"
+          placeholder="Enter the Current Price of the stocks"
+      /></label>
+
+      <button id="submit-btn" class="btn-check">Tell Me!!</button>
+
+      <div id="output-box" class="output"></div>
+    </main>
+
+    <footer>
+      <div>
+        <div class="footer-name">Social media Links</div>
+        <a
+          class="footer-links"
+          href="https://github.com/prachi-sahu-codes"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+
+        <a class="footer-links" href="https://twitter.com/sahuprachi637">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        <a
+          class="footer-links"
+          href="https://www.linkedin.com/in/prachi-sahu-96b228200/"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a class="footer-links" href="mailto:prachisahu998@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a class="footer-links" href="https://prachisahuportfolio.netlify.app/">
+          <i class="fa-solid fa-briefcase"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
