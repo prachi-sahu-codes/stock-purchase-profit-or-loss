@@ -8,9 +8,9 @@ submitBtn.addEventListener("click", submitHandler);
 
 function submitHandler() {
   hideOutput();
-  var ip = Number(initialPrice.value);
-  var qty = Number(stocksQuantity.value);
-  var curr = Number(currentPrice.value);
+  let ip = Number(initialPrice.value);
+  let qty = Number(stocksQuantity.value);
+  let curr = Number(currentPrice.value);
 
   if (ip > 0 && qty > 0 && curr > 0) {
     calculateProfitAndLoss(ip, qty, curr);
@@ -18,21 +18,22 @@ function submitHandler() {
     alert("Please fill out all the Fields");
   } else {
     showOutput("Fields should be a positive number");
+    outputBox.style.color = "#fff";
   }
 }
 
 function calculateProfitAndLoss(initial, quantity, current) {
   if (initial > current) {
-    var loss = ((initial - current) * quantity).toFixed(2);
-    var lossPercentage = ((loss / initial) * 100).toFixed(2);
+    let loss = ((initial - current) * quantity).toFixed(2);
+    let lossPercentage = ((loss / initial) * 100).toFixed(2);
 
     showOutput(
       `Hey, the loss is ${loss} and the percent is ${lossPercentage}%`
     );
     outputBox.style.color = "red";
   } else if (current > initial) {
-    var profit = ((current - initial) * quantity).toFixed(2);
-    var profitPercentage = ((profit / initial) * 100).toFixed(2);
+    let profit = ((current - initial) * quantity).toFixed(2);
+    let profitPercentage = ((profit / initial) * 100).toFixed(2);
 
     showOutput(
       `Hey, the profit is ${profit} and the percent is ${profitPercentage}%`
@@ -48,6 +49,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
 function showOutput(message) {
   outputBox.innerText = message;
 }
+
 function hideOutput() {
   outputBox.innerText = "";
 }
