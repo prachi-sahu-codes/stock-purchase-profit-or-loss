@@ -17,7 +17,6 @@ function submitHandler() {
   } else if (ip == "" || qty == "" || curr == "") {
     alert("Please fill out all the Fields");
   } else {
-    // alert("Please fill out all the Fields");
     showOutput("Fields should be a positive number");
   }
 }
