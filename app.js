@@ -16,7 +16,8 @@ function submitHandler() {
   if (ip > 0 && qty > 0 && curr > 0) {
     calculateProfitAndLoss(ip, qty, curr);
   } else if (ip == "" || qty == "" || curr == "") {
-    errorText.innerText = "Please fill out all the Fields";
+    showOutput("Please fill out all the Fields");
+    outputBox.style.color = "#fff";
   } else {
     showOutput("Fields should be a positive number");
     outputBox.style.color = "#fff";
