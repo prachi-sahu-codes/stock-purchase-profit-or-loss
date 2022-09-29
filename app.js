@@ -3,6 +3,7 @@ let stocksQuantity = document.querySelector("#stocks-quantity");
 let currentPrice = document.querySelector("#current-price");
 let submitBtn = document.querySelector("#submit-btn");
 let outputBox = document.querySelector("#output-box");
+let errorText = document.querySelector(".error-text");
 
 submitBtn.addEventListener("click", submitHandler);
 
@@ -15,7 +16,7 @@ function submitHandler() {
   if (ip > 0 && qty > 0 && curr > 0) {
     calculateProfitAndLoss(ip, qty, curr);
   } else if (ip == "" || qty == "" || curr == "") {
-    alert("Please fill out all the Fields");
+    errorText.innerText = "Please fill out all the Fields";
   } else {
     showOutput("Fields should be a positive number");
     outputBox.style.color = "#fff";
