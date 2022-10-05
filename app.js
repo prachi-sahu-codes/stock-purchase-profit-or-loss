@@ -27,7 +27,7 @@ function submitHandler() {
 function calculateProfitAndLoss(initial, quantity, current) {
   if (initial > current) {
     let loss = ((initial - current) * quantity).toFixed(2);
-    let lossPercentage = ((loss / initial) * 100).toFixed(2);
+    let lossPercentage = ((loss / (initial * quantity)) * 100).toFixed(2);
 
     showOutput(
       `Hey, the loss is ${loss} and the percent is ${lossPercentage}%`
@@ -35,7 +35,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
     outputBox.style.color = "red";
   } else if (current > initial) {
     let profit = ((current - initial) * quantity).toFixed(2);
-    let profitPercentage = ((profit / initial) * 100).toFixed(2);
+    let profitPercentage = ((profit / (initial * quantity)) * 100).toFixed(2);
 
     showOutput(
       `Hey, the profit is ${profit} and the percent is ${profitPercentage}%`
